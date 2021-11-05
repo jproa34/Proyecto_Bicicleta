@@ -1,0 +1,264 @@
+* { border:0px; box-sizing: border-box; }
+
+#resultado1 table{
+    background: #41A2BB;
+    color: white;
+    font-weight: lighter;
+    font-family: 'Dosis', sans-serif;
+    flood-color: white;
+    border: 2px solid;
+    width: 100%;
+    
+}
+
+#resultado2 table{
+    background: #41A2BB;
+    color: white;
+    font-weight: lighter;
+    font-family: 'Dosis', sans-serif;
+    flood-color: white;
+    border: 2px solid;
+    width: 100%;
+    
+}
+
+#resultado3 table{
+    background: #41A2BB;
+    color: white;
+    font-weight: lighter;
+    font-family: 'Dosis', sans-serif;
+    flood-color: white;
+    border: 2px solid;
+    width: 100%;
+    
+}
+
+#resultado4 table{
+    background: #41A2BB;
+    color: white;
+    font-weight: lighter;
+    font-family: 'Dosis', sans-serif;
+    flood-color: white;
+    border: 2px solid;
+    width: 100%;
+    
+}
+
+#resultado5 table{
+    background: #41A2BB;
+    color: white;
+    font-weight: lighter;
+    font-family: 'Dosis', sans-serif;
+    flood-color: white;
+    border: 2px solid;
+    width: 100%;
+    
+}
+
+
+#resultado1 table td{
+    width: 25%;
+    text-align: center;
+    border: 0ch solid #452b8b;
+    white-space: nowrap;
+    
+}
+
+#resultado2 table td{
+    width: 25%;
+    text-align: center;
+    border: 0ch solid #452b8b;
+    white-space: nowrap;
+    
+}
+
+#resultado3 table td{
+    width: 25%;
+    text-align: center;
+    border: 0ch solid #452b8b;
+    white-space: nowrap;
+    
+}
+
+#resultado4 table td{
+    width: 25%;
+    text-align: center;
+    border: 0ch solid #452b8b;
+    white-space: nowrap;
+    
+}
+
+#resultado5 table td{
+    width: 25%;
+    text-align: center;
+    border: 0ch solid #452b8b;
+    white-space: nowrap;
+    
+}
+
+
+footer {
+    
+    padding: 3px;
+    background-color: white;
+    color: white;
+  }
+
+#autores{
+    background-color: #E6AA2C;
+    height: 100%;
+    font-weight: lighter;
+    font-family: 'Dosis', sans-serif;
+    height: 20%;
+    
+}
+
+#integrantes{
+    text-align: center;
+    background-color: #E6AA2C;
+    height: 50%;  
+    font-weight: lighter;
+    font-family: 'Dosis', sans-serif;
+}
+
+.container { 
+    padding: 20px; 
+    border: #186EE6 1px solid; 
+    padding: 10px 40px;
+}
+
+.contenedor_izquierdo { 
+    display: inline-block; 
+    width: 30%; 
+    height: auto;   
+    float: left;
+    text-align: center; 
+    padding: 100 0px; 
+}
+
+.contenedor_izquierdo h1{ 
+    color: #186EE6;
+}
+
+.contenedor_derecho { 
+    display: inline-block;
+     width: 70%;
+    height: auto; 
+     text-align: center; 
+     border: #968d8d 1px solid; 
+     padding: 48px 0px; 
+     background-color: #F0EB2E;
+}
+
+h1{
+    color: #186EE6;
+}
+
+.entrada_de_Datos p {
+    text-align: center;
+}
+
+.consultar{
+    background-color: #E6AA2C;
+    width: 110px;
+    height: 50px;
+    border-radius: 100px/50px;
+    color: aliceblue;
+    border-spacing:10px;
+}
+
+.consultar:hover{
+    background-color: #FF932C;
+    width: 110px;
+    height: 50px;
+    border-radius: 100px/50px;
+    color: aliceblue;
+    border-spacing:10px;
+}
+
+.guardar{
+    background-color: #3CD934;
+    width: 110px;
+    height: 50px;
+    border-radius: 100px/50px;
+    color: aliceblue;   
+    border-spacing:10px; 
+}
+
+.guardar:hover{
+    background-color: #70DB53;
+    width: 110px;
+    height: 50px;
+    border-radius: 100px/50px;
+    color: aliceblue;   
+    border-spacing:10px; 
+}
+
+.Actualizar{
+    background-color: #186EE6;
+    width: 110px;
+    height: 50px;
+    border-radius: 100px/50px;
+    color: aliceblue;     
+    border-spacing:10px;
+}
+
+.Actualizar:hover{
+    background-color: #0D30FC;
+    width: 110px;
+    height: 50px;
+    border-radius: 100px/50px;
+    color: aliceblue;     
+    border-spacing:10px;
+}
+
+.Borrar{
+    background-color: red;
+    width: 110px;
+    height: 50px;
+    color: aliceblue;     
+    border-spacing:10px; 
+}
+
+.Borrar:hover{
+    background-color: #BC1001;
+    width: 110px;
+    height: 50px;
+    color: aliceblue;     
+    border-spacing:10px; 
+}
+
+input{
+    width: 200px;
+    height: 25px;
+    float: inline-end;
+    border: 10px;
+}
+
+.paginas{
+    border: 1px solid #2e518b; /*anchura, estilo y color borde*/
+    padding: 10px; /*espacio alrededor texto*/
+    background-color: #2e518b; /*color botón*/
+    color: #ffffff; /*color texto*/
+    text-decoration: none; /*decoración texto*/
+    text-transform: uppercase; /*capitalización texto*/
+    font-family: 'Helvetica', sans-serif; /*tipografía texto*/
+    border-radius: 50px; /*bordes redondos*/
+    width: 500px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.paginas:hover{
+    border: 1px solid #2E3BA3; /*anchura, estilo y color borde*/
+    padding: 10px; /*espacio alrededor texto*/
+    background-color: #2E3BA3; /*color botón*/
+    color: #ffffff; /*color texto*/
+    text-decoration: none; /*decoración texto*/
+    text-transform: uppercase; /*capitalización texto*/
+    font-family: 'Helvetica', sans-serif; /*tipografía texto*/
+    border-radius: 50px; /*bordes redondos*/
+    width: 500px;
+    text-decoration: none;
+    text-align: center;
+}

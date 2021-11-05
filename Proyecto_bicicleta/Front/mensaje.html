@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="css/estilos.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="js/misFunciones.js"></script>
+    <title>Mensajes</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="contenedor_izquierdo">
+            <h1>GRUPO 7</h1>
+            <table>
+                <tr>
+                    <th><a href="bikes.html"><button class="paginas"> Bicicletas</button></a> </th>
+                </tr>
+                <tr>
+                    <th><a href="categorias.html"><button class="paginas"> Categorias </button></a></th>
+                </tr>
+                <tr>
+                    <th> <a href="cliente.html"><button class="paginas">Clientes</button></a> </th>
+                </tr>
+                <tr>
+                    <th> <a href="mensaje.html"> <button class="paginas">Mensajes</button></a></th>
+                </tr>
+                <tr>
+                    <th> <a href="reservation.html"><button class="paginas">Reservaciones</button></a> </th>
+                </tr>
+            </table>
+
+        </div>
+
+        <div class="contenedor_derecho">
+
+            <h1> Mensaje</h1>
+            <br>
+            <div class="entrada_de_Datos">
+                <p> Mensaje: <input type="text" id="MmessageText"></p>
+                <p> Nombre bicicleta: <input type="text" id="Mname"></p>
+            </div>
+            <br>
+            <table>
+                <tr><button onclick="traerInformacionMensaje()" class="consultar"> Consultar Categorias</button></tr>
+                <tr><button onclick="guardarInformacionMensaje()" class="guardar"> Guardar Categorias</button></tr>
+                <tr><button onclick="" class="Actualizar"> Actualizar Categorias</button></tr>
+            </table>
+
+                <br><br>
+                <button onclick="borrarInformacionCategorias()" class="Borrar">Borrar Categorias</button>
+                <input type="number" id="idClienteBorrar" placeholder="id"> </input>
+                <br><br>
+
+            <div id="resultado4"></div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div id="autores">
+            <p>Authores</p>
+        </div>
+        <div id="integrantes">
+            <p>Juan Pablo Sotelo Rativa</p>
+            <p>Jonatan Quiñones Reyes</p>
+            <p>Daniela Alejandra Guerra Cruz</p>
+            <p>Julian Mauricio Enciso Mora</p>
+            <p>Juan Pablo Roa Fragozo</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
