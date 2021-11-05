@@ -198,7 +198,6 @@ h1{
     background-color: #186EE6;
     width: 110px;
     height: 50px;
-    border-radius: 100px/50px;
     color: aliceblue;     
     border-spacing:10px;
 }
@@ -207,7 +206,6 @@ h1{
     background-color: #0D30FC;
     width: 110px;
     height: 50px;
-    border-radius: 100px/50px;
     color: aliceblue;     
     border-spacing:10px;
 }
