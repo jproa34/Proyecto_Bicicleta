@@ -20,6 +20,8 @@ function pintarRespuestaReservaciones(respuesta){
     myTable+="<td>"+"Fecha de prestamo"+"</td>";
     myTable+="<td>"+"Fecha de devolución"+"</td>";
     myTable+="<td>"+"Estado"+"</td>";
+    myTable+="<td>"+"Actualizar"+"</td>";
+    myTable+="<td>"+"Eliminar"+"</td>";
     myTable+="</tr>";
     for(i=0;i<respuesta.length;i++){
         posicion = i + 1;
@@ -28,6 +30,8 @@ function pintarRespuestaReservaciones(respuesta){
         myTable+="<td>"+respuesta[i].startDate+"</td>";
         myTable+="<td>"+respuesta[i].devolutionDate+"</td>";
         myTable+="<td>"+respuesta[i].status+"</td>";
+        myTable+="<td> <button onclick='actualizarInformacionReservacion("+respuesta[i].id+")' class='Actualizar'>Actualizar</button>";
+        myTable+="<td> <button onclick='borrarBikes("+respuesta[i].id+")'  class='Borrar'>Borrar</button>";
         myTable+="</tr>";
     }
     myTable+="</table>";
@@ -66,4 +70,51 @@ function guardarInformacionReservacion(){
     }
     });
 
+}
+
+function actualizarInformacionReservacion(idElemento){
+    
+    if($("#Bname").val().length == 0 || $("#Bbrand").val().length == 0 || $("#Byear").val().length == 0 || $("#Bdescription").val().length == 0){
+        alert("Todos los campos deben estar llenos");
+    }else{
+        let elemento = {
+            id: idElemento,
+            name: $("#Bname").val(),
+            brand: $("#Bbrand").val(),
+            year: $("#Byear").val(),
+            description: $("#Bdescription").val(),
+            /*category:{id: +$("#select-category").val()},*/
+            //proximamante agregar esta parte
+        }
+        
+        console.log(elemento);
+        let dataToSend = JSON.stringify(elemento);
+
+        $.ajax({
+            url:"http://129.151.105.241:8080/api/Bike/update",
+            type: "PUT",
+            data: dataToSend,
+            contentType: "application/JSON",
+            datatype: 'JSON',
+
+            success: function (response) {
+                
+                console.log(response);
+                $("#resultado2").empty(); 
+                alert("se ha Actualizado Correctamente!")
+
+                //Limpiar Campos
+                $("#resultado2").empty();
+                $("#id").val("");
+                $("#Bname").val("");
+                $("#Bbrand").val("");
+                $("#Byear").val("");
+                $("#Bdescription").val("");
+
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                alert("No se Actualizo Correctamente!")
+            }
+        });
+    }
 }

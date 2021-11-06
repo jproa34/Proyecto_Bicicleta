@@ -77,7 +77,7 @@ function guardarInformacionBikes(){
 function actualizarInformacionBikes(idElemento){
     
     if($("#Bname").val().length == 0 || $("#Bbrand").val().length == 0 || $("#Byear").val().length == 0 || $("#Bdescription").val().length == 0){
-        alert("Todos los campos deben estar llenos")
+        alert("Todos los campos deben estar llenos");
     }else{
         let elemento = {
             id: idElemento,
@@ -88,7 +88,7 @@ function actualizarInformacionBikes(idElemento){
             /*category:{id: +$("#select-category").val()},*/
             //proximamante agregar esta parte
         }
-        alert("funciono bien")
+        
         console.log(elemento);
         let dataToSend = JSON.stringify(elemento);
 

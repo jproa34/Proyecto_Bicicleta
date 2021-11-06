@@ -41,8 +41,8 @@
             <h1> Reservaciones</h1>
             <br>
             <div class="entrada_de_Datos">
-                <p> Fecha de comienzo: <input type="text" id="RstartDate" placeholder="yyyy-mm-dd"></p>
-                <p> Fecha de devolución: <input type="text" id="RdevolutionDate" placeholder="yyyy-mm-dd"></p>
+                <p> Fecha de comienzo: <input  class="controlReservation" type="date" id="RstartDate" placeholder="startDate"></p>
+                <p> Fecha de devolución: <input class="controlReservation" type="date" id="RdevolutionDate" placeholder="yyyy-mm-dd"></p>
                 <p> Estado: <input type="text" id="Rstatus" ></p>
                 <p></p>
             </div>
@@ -50,13 +50,8 @@
             <table>
                 <tr><button onclick="traerInformacionReservacion()" class="consultar"> Consultar Categorias</button></tr>
                 <tr><button onclick="guardarInformacionReservacion()" class="guardar"> Guardar Categorias</button></tr>
-                <tr><button onclick="" class="Actualizar"> Actualizar Categorias</button></tr>
+               
             </table>
-
-                <br><br>
-                <button onclick="borrarInformacionCategorias()" class="Borrar">Borrar Categorias</button>
-                <input type="number" id="idClienteBorrar" placeholder="id"> </input>
-                <br><br>
 
             <div id="resultado5"></div>
         </div>

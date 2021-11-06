@@ -19,6 +19,8 @@ function pintarRespuestaMensaje(respuesta){
     myTable+="<td>"+"Id"+"</td>";
     myTable+="<td>"+"Mensaje"+"</td>";
     myTable+="<td>"+"Nombre de bicicleta"+"</td>";
+    myTable+="<td>"+"Actualizar"+"</td>";
+    myTable+="<td>"+"Eliminar"+"</td>";
     myTable+="</tr>";
     for(i=0;i<respuesta.length;i++){
         posicion = i + 1;
@@ -26,6 +28,8 @@ function pintarRespuestaMensaje(respuesta){
         myTable+="<td>"+posicion+"</td>";
         myTable+="<td>"+respuesta[i].messageText+"</td>";
         myTable+="<td>"+respuesta[i].name+"</td>";
+        myTable+="<td> <button onclick='actualizarInformacionMensaje("+respuesta[i].id+")' class='Actualizar'>Actualizar</button>";
+        myTable+="<td> <button onclick='borrarCategoria("+respuesta[i].id+")'  class='Borrar'>Borrar</button>";
         myTable+="</tr>";
     }
     myTable+="</table>";
@@ -60,6 +64,37 @@ function guardarInformacionMensaje(){
 
 
     }
+    });
+
+}
+
+function actualizarInformacionMensaje(idElemento){
+    let myData={
+        idMessage:idElemento,
+        messageText:$("#MmessageText").val(),
+       // skate:{id: +$("#select-skate").val()},
+       // client:{idClient: +$("#select-client").val()},
+
+    
+
+
+    };
+    console.log(myData);
+    let dataToSend=JSON.stringify(myData);
+    $.ajax({
+        url:"http://129.151.105.241:8080/api/Message/update",
+        type:"PUT",
+        data:dataToSend,
+        contentType:"application/JSON",
+        datatype:"JSON",
+        success:function(respuesta){
+            console.log(respuesta);
+            $("#resultado4").empty();
+            $("#MmessageText").val("");
+           
+            autoInicioMensajes();
+            alert("se ha Actualizado correctamente el Mensaje")
+        }
     });
 
 }

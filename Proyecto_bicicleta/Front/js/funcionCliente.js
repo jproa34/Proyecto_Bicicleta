@@ -75,50 +75,39 @@ function guardarInformacionClientes(){
 }
 
 function actualizarInformacionCliente(idElemento){
-    if($("#CLemail").val().length == 0 || $("#CLpassword").val().length == 0 || $("#CLname").val().length == 0 || $("#CLage").val().length == 0){
-        alert("Todos los campos deben estar llenos")
-    }else{
+    let myData={
+        idClient:idElemento,
+        email:$("#CLemail").val(),
+        password:$("#CLpassword").val(),
+        name:$("#CLname").val(),
+        age:$("#CLage").val(),
 
-        let myData={
-            idClient:idElemento,
-            email:$("#CLemail").val(),
-            password:$("#CLpassword").val(),
-            name:$("#CLname").val(),
-            age:$("#CLage").val(),
-            
-        
-        };
-
-
-
-        console.log(myData);
-        let dataToSend=JSON.stringify(myData);
-        $.ajax({
-            url:"http://129.151.105.241:8080/api/Client/update",
-            type:"PUT",
-            data:dataToSend,
-            contentType:"application/JSON",
-            datatype:"JSON",
-
-
-            success:function(respuesta){
-                //Limpiar Campos
-                $("#resultado3").empty();
-                $("#idClient").val("");
-                $("#CLemail").val("");
-                $("#CLpassword").val("");
-                $("#CLname").val("");
-                $("#CLage").val("");
-                //autoInicioCliente();
-                alert("se ha Actualizado correctamente Cliente")
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-                alert("No se Actualizo Correctamente!")
-            }
-
-        });
 
     }
 
+    
+    console.log(myData);
+    let dataToSend=JSON.stringify(myData);
+    $.ajax({
+        url:"http://129.151.105.241:8080/api/Client/update",
+        type:"PUT",
+        data:dataToSend,
+        contentType:"application/JSON",
+        datatype:"JSON",
+        success:function(response){
+            console.log(response);
+            $("#resultado3").empty(); 
+            alert("se ha Actualizado Correctamente!")
+
+            $("#resultado3").empty();
+            $("#idClient").val("");
+            $("#CLemail").val("");
+            $("#CLpassword").val("");
+            $("#CLname").val("");
+            $("#CLage").val("");
+            traerInformacionClientes();
+
+        }
+    });
 
 }
