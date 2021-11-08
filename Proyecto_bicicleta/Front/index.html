@@ -1,121 +1,103 @@
 <!DOCTYPE html>
-<html >
+<html>
+
 <head>
-  
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link href="css/estilos.css" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap" rel="stylesheet">
-    <script type="text/javascript" src="js/misFunciones.js"></script>  
-    <title>Reto3</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="js/funcionCliente.js"></script>
+    <title>Inicio</title>
 </head>
+
 <body>
+    <div class="container">
+        <div class="contenedor_izquierdo">
+            <h1>GRUPO 7</h1>
+            <table>
+                <tr>
+                    <th><a href="bikes.html"><button class="paginas"> Bicicletas</button></a> </th>
+                </tr>
+                <tr>
+                    <th><a href="categorias.html"><button class="paginas"> Categorias </button></a></th>
+                </tr>
+                <tr>
+                    <th> <a href="cliente.html"><button class="paginas">Clientes</button></a> </th>
+                </tr>
+                <tr>
+                    <th> <a href="mensaje.html"> <button class="paginas">Mensajes</button></a></th>
+                </tr>
+                <tr>
+                    <th> <a href="reservation.html"><button class="paginas">Reservaciones</button></a> </th>
+                </tr>
+                <tr>
+                    <th> <a href="index.html"><button class="paginas">Presentación del proyecto</button></a> </th>
+                </tr>                   
+            </table>
 
-    <h1> Categorias</h1>
-    
-   
-    
-    <div>
-        <input type="text" id="Cname" placeholder="name">
-        <input type="text" id="Cdescription" placeholder="description">
-       
-        
-    </div>
-    <button onclick="traerInformacionCategorias()" , style="background-color: rgb(207, 196, 38);"> Consultar Categorias</button>
-    <button onclick="guardarInformacionCategorias()", style="background-color: rgb(207, 196, 38);">Guardar Categorias</button>
-    <button onclick="guardarInformacionCategorias()", style="background-color: rgb(207, 196, 38);">Actualizar Categorias</button>
-
-    <div>
-        <h5>Borrar Categoria</h5>
-        <button onclick="borrarInformacionCategorias()", style="background-color: rgb(207, 196, 38);">Borrar Categorias</button>
-        <input type="number" id="idClienteBorrar" placeholder="id"> </input>
-    </div>
-
-    <div id="resultado1"></div>
-
-
-
-
-
-
-
-
-    
-    <h1> Bikes</h1>
-    <div id="resultado2"></div>
-    
-    
-    <div>
-        <input type="text" id="Bname" placeholder="name">
-        <input type="text" id="Bbrand" placeholder="brand">
-        <input type="number" id="Byear" placeholder="year">
-        <input type="text" id="Bdescription" placeholder="description">    
-    </div>
-
-       
-    <div>
-    <button onclick="traerInformacionBikes()", style="background-color: rgb(146, 207, 75);">Consultar Bikes</button>
-    <button onclick="guardarInformacionBikes()", style="background-color: rgb(146, 207, 75);">Guardar Bikes</button>
-    <button onclick="guardarInformacionBikes()", style="background-color: rgb(146, 207, 75);">Borrar Bikes</button>
-    <button onclick="guardarInformacionBikes()", style="background-color: rgb(146, 207, 75);">Actualizar Bikes</button>
-   
-    </div>
-    <h1> Clientes</h1>
-    <div id="resultado3"></div>
-    
-    <div>
-        <input type="text" id="CLemail" placeholder="email">
-        <input type="text" id="CLpassword" placeholder="password">
-        <input type="text" id="CLname" placeholder="name">
-        <input type="number" id="CLage" placeholder="age">  
-    </div>
-
-    <div>
-    <button onclick="traerInformacionClientes()", style="background-color: rgb(216, 140, 89);" > Consultar Clientes</button>
-    <button onclick="guardarInformacionClientes()", style="background-color: rgb(216, 140, 89);" >Guardar Clientes</button>
-    <button onclick="guardarInformacionClientes()", style="background-color: rgb(216, 140, 89);" >Borrar Clientes</button>
-    <button onclick="guardarInformacionClientes()", style="background-color: rgb(216, 140, 89);" >Actualizar Clientes</button>
-    </div>
-
-
-    <h1> Mensaje</h1>
-    <div id="resultado4"></div>
-    
-    <div>
-        <input type="text" id="MmessageText" placeholder="messagetext">
-        <input type="text" id="Mname" placeholder="name bicicleta"> 
-       
-         
-    </div>
-
-    <div>
-    <button onclick="traerInformacionMensaje()", style="background-color: rgb(216, 140, 89);" > Consultar Mensaje</button>
-    <button onclick="guardarInformacionMensaje()", style="background-color: rgb(216, 140, 89);" >Guardar Mensaje</button>
-    <button onclick="guardarInformacionMensaje()", style="background-color: rgb(216, 140, 89);" >Borrar Mensaje</button>
-    <button onclick="guardarInformacionMensaje()", style="background-color: rgb(216, 140, 89);" >Actualizar Mensaje</button>
-
-     </div>
-
-
-    <h1> Reservacion</h1>
-    <div id="resultado5"></div>
-    
-    <div>
-        <input type="text" id="RstartDate" placeholder="startDate">
-        <input type="text" id="RdevolutionDate" placeholder="devolutionDate">
-        <input type="text" id="Rstatus" placeholder="status">
-        <input type="reset" value="Borrar información">
-         
-    </div>
-
-    <div>
-    <button onclick="traerInformacionReservacion()", style="background-color: rgb(216, 140, 89);" > Consultar Reservacion</button>
-    <button onclick="guardarInformacionReservacion()", style="background-color: rgb(216, 140, 89);" >Guardar Reservacion</button>
-    <button onclick="guardarInformacionReservacion()", style="background-color: rgb(216, 140, 89);" >Borrar Reservacion</button>
-    <button onclick="guardarInformacionReservacion()", style="background-color: rgb(216, 140, 89);" >Actualizar Reservacion</button>
-    
         </div>
-    </body>
+
+        <div class="contenedor_derecho2">
+
+            <h1> Proyecto Alquiler de Bicicletas para turismo</h1>
+            <br>
+            <p>Una importante compañía que fabrica y alquila bicicletas ha decidido ofrecer sus servicios por
+                medio de internet; se han dado cuenta que a través de una aplicación web los clientes (nuevos y
+                actuales) pueden realizar todos los procesos que antes hacían y que implicaba una carga
+                burocrática y papeleo innecesario. De esta manera, la autogestión permitirá que el cliente elija
+                que productos quiere alquilar, qué días lo quiere utilizar, dónde lo recogerá y en qué lugar lo
+                entregará. El cliente sabrá de esa manera cuánto cuesta el alquiler y además se le podrá brindar
+                información adicional que siempre es necesaria en estos procesos. El uso de la aplicación reducirá
+                considerablemente el tiempo de atención, pues cada vez que un asesor atiende a un usuario, deja
+                de atender a muchos más. Los asesores ahora estarán disponibles solamente para hacer la entrega
+                de las bicicletas en transacciones que ya están cerrados. Para esta primera implementación el
+                director de la compañía ha decidido que los pagos se hagan de manera presencial en el momento
+                de retirar las bicicletas.
+                </p>
+            
+            <p>Una importante compañía que fabrica y alquila bicicletas ha decidido ofrecer sus servicios por
+                medio de internet; se han dado cuenta que a través de una aplicación web los clientes (nuevos y
+                actuales) pueden realizar todos los procesos que antes hacían y que implicaba una carga
+                burocrática y papeleo innecesario. De esta manera, la autogestión permitirá que el cliente elija
+                que productos quiere alquilar, qué días lo quiere utilizar, dónde lo recogerá y en qué lugar lo
+                entregará. El cliente sabrá de esa manera cuánto cuesta el alquiler y además se le podrá brindar
+                información adicional que siempre es necesaria en estos procesos. El uso de la aplicación reducirá
+                considerablemente el tiempo de atención, pues cada vez que un asesor atiende a un usuario, deja
+                de atender a muchos más. Los asesores ahora estarán disponibles solamente para hacer la entrega
+                de las bicicletas en transacciones que ya están cerrados. Para esta primera implementación el
+                director de la compañía ha decidido que los pagos se hagan de manera presencial en el momento
+                de retirar las bicicletas
+                </p>
+
+            <p>Durante el tiempo de uso, la reserva debe cambiar de estado y debe marcarse como finalizada en
+                el momento en que la bicicleta sea devuelta. Al devolver la bicicleta el cliente debe calificar su
+                experiencia y escribir algún comentario como realimentación al proceso; así la empresa sabrá en
+                qué debe mejorar.</p>
+
+            <p>Una funcionalidad que la gerencia valoraría mucho tener es la posibilidad de enviar mensajes por
+                parte de los clientes para obtener información, hacer sugerencias, felicitaciones o expresar su
+                gratitud. Estos mensajes serán leídos por el usuario administrador.</p>
+
+
+        </div>
+
+    </div>
+
+    <footer>
+        <div id="autores">
+            <p>Authores</p>
+        </div>
+        <div id="integrantes">
+            <p>Juan Pablo Sotelo Rativa</p>
+            <p>Jonatan Quiñones Reyes</p>
+            <p>Daniela Alejandra Guerra Cruz</p>
+            <p>Julian Mauricio Enciso Mora</p>
+            <p>Juan Pablo Roa Fragozo</p>
+        </div>
+    </footer>
+
+</body>
 
 </html>

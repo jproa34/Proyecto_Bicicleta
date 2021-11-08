@@ -127,6 +127,8 @@ footer {
     padding: 10px 40px;
 }
 
+
+
 .contenedor_izquierdo { 
     display: inline-block; 
     width: 30%; 
@@ -135,6 +137,7 @@ footer {
     text-align: center; 
     padding: 100 0px; 
 }
+
 
 .contenedor_izquierdo h1{ 
     color: #186EE6;
@@ -148,6 +151,19 @@ footer {
      border: #968d8d 1px solid; 
      padding: 48px 0px; 
      background-color: #F0EB2E;
+}
+
+.contenedor_derecho2 { 
+    display: inline-block;
+     width: 70%;
+    height: auto; 
+     text-align: left; 
+     border: #968d8d 1px solid; 
+     padding: 48px 0px; 
+     background-color: #F0EB2E;
+     border: 15px solid rgba(0, 0, 0, 0);
+     color: #968d8d;
+     font-size: 17px;
 }
 
 h1{
